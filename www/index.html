@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body ng-app="mainApp">
+
+    <nav id="navBar" class="navbar navbar-default" role="navigation" style="display: none;">
+        <div class="navbar-header">
+            <p id="userName" class="navbar-brand"></p>
+        </div>
+        <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+        otro elemento que se pueda ocultar al minimizar la barra -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Salir</a></li>    
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div ng-include="'login.html'"></div>
+        <div ng-include="'registro_folios.html'"></div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- this app -->
+    <script src="js/app/index.js"></script>
+    <script src="js/app/config.js"></script>
+    <script src="js/app/tools.js"></script>
+    <script src="js/app/login.js"></script>
+
+</body>
+</html>

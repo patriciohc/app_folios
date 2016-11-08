@@ -1,0 +1,55 @@
+
+<!-- login -->
+<div id="login">
+    <h3>Sistema de resigistro de folios</h3>
+    <div class="row">
+        <div class="col-md-10">
+        <div role="form" class="form-inline">
+            <div class="form-group">
+                <label for="txtUserNameLogin" class="control-label sr-only">Nombre de usuario</label>
+                <input id="txtUserNameLogin" type="text" class="form-control" placeholder="Nombre de Usuario"/>
+            </div>
+            <div class="form-group">
+                <label for="txtPasswordLogin" class="control-label sr-only">Contraseña</label>
+                <input id="txtPasswordLogin" type="password" class="form-control" placeholder="Contraseña"/>
+            </div>
+            <div class="form-group">
+                <button id="btnLogin" class="btn btn-primary" onclick="Login.login()">Login</button>
+            </div>
+        </div>
+        <div>
+    </div>
+    
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+        <div role="form" ng-controller="signUp">
+            <div class="form-group">
+                <label for="txtNameReg" class="control-label sr-only">Nombre</label>
+                <input id="txtNameReg" ng-model="user.name" type="text" class="form-control" placeholder="Nombre"/>
+            </div>
+            <div class="form-group">
+                <label for="txtNameReg" class="control-label sr-only">Apellido Paterno</label>
+                <input id="txtNameReg" ng-model="user.firsName" type="text" class="form-control" placeholder="Apellido Paterno"/>
+            </div>
+            <div class="form-group">
+                <label for="txtLastNameReg" class="control-label sr-only">Apellido Materno</label>
+                <input id="txtLastNameReg" ng-model="user.lastName" type="text" class="form-control" placeholder="Apellido Materno"/>
+            </div>
+            <div class="form-group">
+                <label for="txtUserNameReg" class="control-label sr-only">Nombre de usuario</label>
+                <input id="txtUserNameReg" ng-model="user.userName" type="text" class="form-control" placeholder="Nombre de usuario"/>
+            </div>
+             <div class="form-group">
+                <label for="txtPasswordReg" class="control-label sr-only">Contraseña</label>
+                <input id="txtPasswordReg" ng-model="user.password" type="password" class="form-control" placeholder="Contraseña"/>
+            </div>
+            <div class="form-group">
+                <button id="btnRegisterUser" class="btn btn-primary" ng-click="registrar()">Registrar usuario</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>

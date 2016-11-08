@@ -1,0 +1,78 @@
+
+<!-- registro de folios -->
+
+<div id="registroFolios" ng-controller="registroFoliosController" style="display: none;">
+    <h3>Registro de folios generados</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <form role="form">
+                <div class="form-group" >
+                    <label for="txtFolio" class="control-label sr-only">Folio</label>
+                    <input type="text" class="form-control" id="txtNameProcut" ng-model="product.name" placeholder="Folio">
+                </div>
+                <div class="form-group">
+                    <label for="txtFecha" class="control-label sr-only">Fecha</label>
+                    <input type="text" class="form-control" id="txtCodeProcut" ng-model="product.code" placeholder="Fecha">
+                </div>
+        
+                  <div class="form-group">
+                    <label for="txtHora" class="control-label sr-only">Hora</label>
+                    <input type="text" class="form-control" id="txtPrice" ng-model="product.price" placeholder="Hora">
+                </div>
+        
+                  <div class="form-group">
+                    <label for="txtPricePublic" class="control-label sr-only">Partida</label>
+                    <input type="text" class="form-control" id="txtPricePublic" ng-model="product.price_public" placeholder="Partia">
+                </div>
+        
+                <div class="form-group">
+                    <label for="txtExistence" class="control-label sr-only">Foja</label>
+                    <input type="text" class="form-control" id="txtExistence" ng-model="product.existence" placeholder="Foja">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtExistence" class="control-label sr-only">Tomo</label>
+                    <input type="text" class="form-control" id="txtExistence" ng-model="product.existence" placeholder="Tomo">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtExistence" class="control-label sr-only">Año</label>
+                    <input type="number" class="form-control" id="txtExistence" ng-model="product.existence" placeholder="Año">
+                </div>
+
+                <div class="form-group">
+                    <button id="btnRegistrar" class="btn btn-primary" ng-click="registrarFolio()">Login</button>
+                </div>
+
+            </form>
+        </div>
+
+
+        <div class="col-md-9">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Folio</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Partida</th>
+                        <th>Foja</th>
+                        <th>Tomo</th>
+                        <th>Año</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="f in folios" ng-click="setFolio(this)" style="cursor:pointer;">
+                        <td>{{ f.folio }}</td>
+                        <td>{{ f.fecha }}</td>
+                        <td>{{ f.hora }}</td>
+                        <td>{{ f.partida }}</td>
+                        <td>{{ f.foja }}</td>
+                        <td>{{ f.tomo }}</td>
+                        <td>{{ f.año }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

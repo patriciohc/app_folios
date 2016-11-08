@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 const app = require('./app');
 const config = require('./config');
-const passport = require('./config/passport')();
+//const passport = require('./config/passport')();
 
 
 mongoose.connect(config.db, (err, res) => {

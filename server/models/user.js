@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const crypto = require('crypto');
 
 const UserSchema = new Schema({
-    email: { type: String, unique: true, lowercase: true }.
+    //email: { type: String, unique: true, lowercase: true }.
+    name: String,
     firsName: String,
     lastName: String,
     userName: String,
@@ -15,14 +16,14 @@ const UserSchema = new Schema({
     password: {type: String, select: false},
     //signupDate: {type: Date, dafalut: Date.now() },
     //lastLogin: Date,
-    provider: { type: String, required: 'Provider es obligatorio'},
-    providerId: String,
-    providerData: {} 
+    //provider: { type: String, required: 'Provider es obligatorio'},
+    //providerId: String,
+    //providerData: {} 
 
     salt: { type: String, },
 });
 
-UserSchema.pre('save' (next) => {
+UserSchema.pre('save', (next) => {
     // let user = this
     // if (!user.isModified('password')) return next()
 
@@ -50,5 +51,12 @@ UserSchema.methods.hashPasword = function(password){
 UserSchema.methods.authenticate = function(password){
     return this.password === this.hashPasword(password);
 }
+
+// UserSchema.statics.findUniqueUsermame = function(username, suffix, callback){
+//     var _this = this;
+//     var possibleUsername = username + (suffix || '');
+//     this.findOne({})
+
+// }
 
 module.exports = mongoose.model('User', UserSchema);
